@@ -1,0 +1,73 @@
+/**** TableData 组件样式 *****/
+.ant-table-wrap .ant-table-title{
+  padding: 0 !important;
+}
+.ant-table-wrap a{
+  padding-right: 8px;
+  display: inline-block;
+}
+.ant-table-wrap a + a{
+  border-left: 1px solid #e8e8e8;
+  padding-left: 8px;
+}
+.tr-row-bg { /*偶数行切换背景色*/
+  background-color: #FBFBFB;
+}
+.table-with-border{
+  .ant-table-tbody > tr > td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1)!important;
+  }
+}
+
+
+// Table
+// --
+.ant-table{
+  .ant-table-header{/*消除固定表头对tbody的影响*/
+    margin-bottom: -1px !important;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden!important;
+     .ant-table-thead > tr > th {
+       //text-align: center;/*未分页表头居中*/
+     }
+  }
+  .ant-table-body {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: none;
+    margin-top: 0;
+     .ant-table-thead >tr >th{
+       //text-align: center;/*分页表头居中*/
+     }
+    .ant-table-tbody > tr{
+      &:hover td{
+        background-color: #f5f5f5!important;
+      }
+      > td {
+        //text-align: center;/*分页表格居中*/
+        border-bottom: none;
+        max-width: 0;
+        word-break: normal;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens:auto;
+      }
+    }
+  }
+}
+
+
+// Pagination
+// --
+.ant-pagination a{
+  padding: 0 6px;
+}
+.ant-pagination .ant-pagination-item-link{
+  padding: 0 8px;
+  position: absolute;//...定位
+  height: auto!important;
+}
+.ant-pagination-prev, .ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next{
+  text-align: left!important;
+}

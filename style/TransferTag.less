@@ -1,0 +1,149 @@
+
+@import "~antd/dist/antd.less";
+.transfer-box{
+  display: flex;
+  width: 100%;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  transition: all 0.3s;
+  min-height: 300px;
+  >div{
+    padding: 10px 5px;
+    >.transfer-box-title{
+      display: flex;
+      margin-bottom: 0;
+      justify-content: space-between;
+      align-items: center;
+      >span{
+        vertical-align: middle;
+        line-height: normal;
+      }
+      >.transfer-box-title-btn{
+        font-size: 12px;
+        text-align: center;
+        border: 1px solid #ccc;
+        transition: all 0.3s;
+        border-radius: 2px;
+        cursor: pointer;
+        line-height: 15px;
+        width: 36px;
+        height: 22px;
+        padding: 3px;
+      }
+      >.primary.transfer-box-title-btn{
+        background-color: @primary-color;
+        color: #fff;
+        border: 1px solid @primary-color;
+      }
+      >.transfer-box-title-btn:not(.primary):hover{
+        border: 1px solid @primary-color;
+        color: @primary-color;
+      }
+      >.primary:hover{
+        background-color: fade(@primary-color,80%);
+      }
+    }
+    >.ant-input-search{
+      margin-top: 10px;
+      .ant-input{
+        padding-right: 0!important;
+      }
+      .ant-input-suffix{
+        right: 12px!important;
+      }
+    }
+    >.transfer-content{
+      padding: 0 0 10px 0;
+      margin-top: 10px;
+      max-height: 300px;
+      overflow-y: auto;
+      /*display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;*/
+      >div{
+        width: 80px;
+        display: inline-block;
+        position: relative;
+        height: 24px;
+        border: 1px solid #DCDCDC;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 23px;
+        margin-right: 4px;
+        margin-bottom: 6px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-size: 12px;
+        padding: 0 7px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        >.anticon{
+          float: right;
+          top: 6px;
+          position: absolute;
+          right: 5px;
+        }
+      }
+      /*>span:nth-child(odd){
+        margin-right: 4px;
+      }*/
+      >div.transfer-content-target-tag{
+        text-align: left;
+        border: 1px solid fade(@primary-color,30);
+        color: fade(@primary-color,90);
+        background-color: fade(@primary-color,10);
+        padding-right: 20px;
+        >.anticon:hover{
+          color: #FC1312;
+          transition: all 0.3s;
+        }
+      }
+      >div.transfer-content-source-tag{
+        color: #000;
+      }
+      >div.transfer-content-target-tag:hover{
+        border-color: @primary-color;
+        color: @primary-color;
+        background-color: fade(@primary-color,20);
+      }
+      >div.transfer-content-source-tag:hover{
+        border-color: @primary-color;
+        color: @primary-color;
+      }
+
+    }
+  }
+  >.transfer-target-box{
+    flex: 1;
+    transition: all 0.3s;
+    border-right: 1px solid #dcdcdc;
+  }
+  >.transfer-source-box{
+    flex: 1;
+  }
+
+}
+/*.has-error .transfer-box .ant-input-affix-wrapper .ant-input, .has-error .ant-input-affix-wrapper .ant-input:hover{
+  border-color:#d9d9d9!important;
+}*/
+.has-error {
+  .transfer-box{
+    border-color: #f5222d;
+    >.transfer-target-box{
+      border-color: #f5222d;
+    }
+    .ant-input-affix-wrapper{
+      .ant-input{
+       border-color: #d9d9d9;
+      }
+      .ant-input:hover{
+        border-color: @primary-color;
+      }
+      .ant-input:focus{
+        box-shadow: 0 0 0 2px fade(@primary-color,20%);
+      }
+    }
+  }
+}

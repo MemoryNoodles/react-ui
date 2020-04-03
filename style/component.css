@@ -1,0 +1,27 @@
+@import "component.css";
+/**** DraggableModal 组件样式 *****/
+.drag_modal_wrap {
+    box-shadow: 3px 3px 20px 5px rgba(0,0,0,.2)!important;
+    right: auto !important;
+    bottom: auto !important;
+}
+.drag_modal_wrap .ant-modal {
+    padding: 0;
+}
+.drag_modal_wrap .drag_title {
+    cursor: move;
+}
+
+
+/**** CheckTagGroup 组件样式 *****/
+.ant-tag-check-group{
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-checkable-tag{
+    display: block;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+
+

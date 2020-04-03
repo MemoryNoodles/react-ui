@@ -1,0 +1,52 @@
+
+/**** SearchForm 组件样式 *****/
+.ant-advanced-search-form.ant-form-inline{
+  background: #fff;
+  border: none;
+  border-radius: 0;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item-label{
+  color: #25323b;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item{ /*表单项*/
+  display: flex;
+  align-items: center;
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-select-selection__rendered{
+  height: 32px;
+  line-height: 32px;
+  margin-top: -1px;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-form-item-control-wrapper{
+  flex: 1;  /*输入框自适应表单项余下宽*/
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-form-item-control-wrapper .ant-form-item-control{
+  line-height: 100%;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-form-item-control-wrapper .ant-form-item-control .ant-form-item-children{
+  display: block;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-form-item-control-wrapper .ant-form-item-control .ant-form-explain-holder{
+  display: none;
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-input-number,
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-calendar-picker{
+  width: 100%; /*日期选择框*/
+}
+.ant-advanced-search-form.ant-form-inline .ant-form-item .ant-select-selection-selected-value{
+  color: rgba(0, 0, 0, 0.51) ; /*下拉选择框*/
+}
+
+@media (max-width: 575px){
+  .ant-advanced-search-form{
+    .ant-form-item-label {
+      padding-right: 8px;
+    }
+    .ant-form-item-label,
+    .ant-form-item-control-wrapper {
+      width: auto!important;/*纠正antd的样式*/
+    }
+  }
+}
